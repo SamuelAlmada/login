@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form method="POST" action="">
+            {% csrf_token %}
+            {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                        <li class="{{ message.tags }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            <div class="input-group-usuario">
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group-senha">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="senha" required>
+                <div class="footer-links">
+                    <a href="{% url 'password_reset' %}">Esqueci Minha Senha</a>
+                </div>
+            </div>
+            <button type="submit">Entrar</button>
+            <button onclick="window.location.href='{% url 'register' %}'">Registrar</button>
+            <!-- não sei como isso funcionou mas ta funcionando -->
+        </form>
+    </div>
+</body>
+</html>

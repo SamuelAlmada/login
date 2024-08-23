@@ -1,0 +1,146 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background-color: rgba(151, 162, 215, 0.651);
+    padding: 25px;
+    border-radius: 45px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.479);
+    width: 350px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.input-group-mail {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group-mail label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555555;
+}
+
+.input-group-mail input {
+    width: 90%;
+    padding: 15px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    text-align: center;
+    background-image: url('assets/icons/mail.png');
+    background-size: 12% auto;
+    background-position: 2px bottom;
+    background-repeat: no-repeat;
+}
+
+.input-group-usuario {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group-usuario label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555555;
+}
+
+.input-group-usuario input {
+    width: 90%;
+    padding: 15px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    text-align: center;
+    background-image: url('assets/icons/user.png');
+    background-size: 13% auto;
+    background-position: 10px left;
+    background-repeat: no-repeat;
+}
+
+.input-group-senha {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group-senha label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555555;
+}
+
+.input-group-senha input {
+    width: 90%;
+    padding: 15px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    text-align: center;
+    background-image: url('assets/icons/cadeado.png');
+    background-size: 12% auto;
+    background-position: 2px bottom;
+    background-repeat: no-repeat;
+}
+
+.button{
+    width: 60%;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: none;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.button:hover {
+    background-color: rgb(151, 162, 215);
+    transform: translateY(-2px);
+}
+
+button{
+    width: 60%;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: none;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: rgb(151, 162, 215);
+    transform: translateY(-2px);
+}
+
+.footer-links {
+    width: 96%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3px;
+    margin-bottom: 45px;
+}
+
+.footer-links a {
+    color: #1100ff;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* dia e noite */

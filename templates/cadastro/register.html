@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form method="POST" action="{% url 'register' %}">
+            {% csrf_token %}
+            <div class="input-group-usuario">
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group-mail">
+                <label for="username">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group-senha">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="input-group-senha">
+                <label for="password">Repita a Senha:</label>
+                <input type="password" id="password" name="password2" required>
+            </div>
+            <br>
+            {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                        <li class="{{ message.tags }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            <br>
+            <button type="submit">Registrar</button>
+            <button onclick="window.location.href='{% url 'login' %}'">Voltar ao Login</button>
+        </form>
+    </div>
+</body>
+</html>

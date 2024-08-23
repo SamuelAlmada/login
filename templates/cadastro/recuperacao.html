@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Recuperação de Senha</h2>
+        <form method="POST" action="">
+            {% csrf_token %}
+            <div class="input-group-mail">
+            {{ form.email.errors }}   
+                <label for="username">Digite seu enereço de E-mail:</label>
+                {{ form.email }}
+                <input type="email" id="email" name="email" required>
+            </div>
+            {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                        <li class="{{ message.tags }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
